@@ -1,6 +1,6 @@
 """Case-study #2 
 Developers:
-Raspopova Aleksandra (%), Belozertseva M (%), Fauzi A (%) 
+Raspopova Aleksandra (70%), Belozertseva M (%), Fauzi A (%) 
 
 """ 
 # string constants
@@ -12,7 +12,7 @@ for month in range(12):
     income = float(input())
     annual_income += income
 print(annual_income)
-a=int(input())
+a=int(input("Ступень налогообложения"))
 if a==1:
     if (annual_income>=0 and annual_income<=9075):
         N=0.1*(annual_income)
@@ -36,4 +36,62 @@ if a==1:
         print(N)
 elif a==2:
     
-elif a==3:
+    
+    
+elif a == 3:
+    if (annual_income >= 0 and annual_income <= 12950):
+        if annual_income>9075:
+            N=0.15*(36900-9075)+0.1*18150+0.1 *(annual_income)
+            print(N)
+        else:
+            N=0.1*9075+0.1*18500+0.1*(annual_income)
+            print(N)
+    elif (annual_income >= 12951 and annual_income <= 49400):
+        if annual_income>36900:
+            N=0.25*(89350-36900)+0.15*(73800-18150)+0.15 *(annual_income-12950)
+            print(N)
+        elif (annual_income>=18151 and annual_income<36900):
+            N = 0.15 * (36900 - 9075) + 0.15 * (73800 - 18150) + 0.15 * (annual_income - 12950)
+        elif annual_income<18151:
+            N=0.15*(36900 - 9075)+0.1*18500+0.15*(annual_income-12951)
+            print(N)
+    elif (annual_income >= 49401 and annual_income <= 127550):
+        if annual_income>89350:
+            N=0.28*(186350-89351)+0.25*(148850-73801)+0.25 *(annual_income-49401)
+            print(N)
+        elif annual_income<=89350 and annual_income>73800:
+            N=0.25*(89350-36901)+0.25*(148850-73801)+0.25 *(annual_income-49401)
+        elif annual_income<=73800:
+            N=0.25*(89350-36901)+0.15*(73800-18151)+0.25*(annual_income-49401)
+            print(N)
+    elif (annual_income >= 127551 and annual_income <= 206600):
+        if annual_income>186350:
+            N=0.33*(405100-186351)+0.28*(226850-148850)+0.28 *(annual_income-127551)
+            print(N)
+        elif annual_income<=186350 and annual_income>148850:
+            N=0.28*(186350-89351)+0.28*(226850-148851)+0.28 *(annual_income-127551)
+            print(N)
+        elif annual_income<=148850:
+            N=0.28*(186350-89351)+0.28*(148850-73801)+0.28*(annual_income-127551)
+            print(N)
+    elif (annual_income >= 206601 and annual_income <= 405100):
+        if annual_income>226850:
+            N=0.33*(405100-186351)+0.33*(405100-226851)+0.33 *(annual_income-206601)
+            print(N)
+        elif annual_income<=226850:
+            N=0.33*(405100-186351)+0.28*(226850-148851)+0.33 *(annual_income-206601)
+            print(N)
+    elif (annual_income >= 405101 and annual_income <= 432200):
+        if annual_income<=406750:
+            N=0.35*(406750-405101)+0.35*(457600-405101)+0.35 *(annual_income-405101)
+            print(N)
+        else:
+            N=0.396*(406751)+0.35*(457600-405101)+0.35 *(annual_income-405101)
+            print(N)
+    elif annual_income >= 432201:
+        if annual_income<=457600:
+            N=0.396*(annual_income-406751)+0.35*(457600-405101)+0.35 *(annual_income-432201)
+            print(N)
+        elif annual_income>457600:
+            N=0.396*(annual_income-406751)+0.396*(annual_income-457601)+0.35 *(annual_income-206601)
+            print(N)
