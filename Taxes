@@ -32,7 +32,7 @@ if a == 1:
         N = 0.35 * (annual_income - 405101) + 117540.5
         print(N)
     elif annual_income >= 406751:
-        N = 0.39 * (annual_income - 406751) + 118117.5
+        N = 0.396 * (annual_income - 406751) + 118117.5
         print(N)
 elif a == 2:
     if 0 <= annual_income <= 18150:
