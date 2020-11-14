@@ -1,6 +1,6 @@
 #Case-study #2
 #Developers:
-#Raspopova Aleksandra (70%), Belozertseva M (50%), Fauzi A (%)
+#Raspopova Aleksandra (55%), Belozertseva M (60%), Fauzi A (55%)
 
 annual_income = float(input('Годовой доход (в долларах): '))
 a = input('Семейное положение (Один/Есть супруг/Родитель-одиночка): ')
