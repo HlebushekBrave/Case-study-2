@@ -18,21 +18,21 @@ if a == 1:
         N = 0.1 * annual_income
         print(N)
     elif 9076 <= annual_income <= 36900:
-        N = 0.15 * (annual_income - 9076) + 907.5
+        N = 907.5 + 0.15 * (annual_income - 9076)
     elif 36901 <= annual_income <= 89350:
-        N = 0.25 * (annual_income - 36901) + 5081.1
+        N = 5081.1 + 0.25 * (annual_income - 36901)
         print(N)
     elif 89351 <= annual_income <= 186350:
-        N = 0.28 * (annual_income - 89351) + 18193.35
+        N = 18193.35 + 0.28 * (annual_income - 89351)
         print(N)
     elif 186351 <= annual_income <= 405100:
-        N = 0.33 * (annual_income - 186351) + 45353.7
+        N = 45353.7 + 0.33 * (annual_income - 186351)
         print(N)
     elif 405101 <= annual_income <= 406750:
-        N = 0.35 * (annual_income - 405101) + 117540.5
+        N = 117540.5 + 0.35 * (annual_income - 405101)
         print(N)
     elif annual_income >= 406751:
-        N = 0.396 * (annual_income - 406751) + 118117.5
+        N = 118117.5 + 0.396 * (annual_income - 406751)
         print(N)
 elif a == 2:
     if 0 <= annual_income <= 18150:
